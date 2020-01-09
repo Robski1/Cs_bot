@@ -3,15 +3,39 @@
         "algorithms" : {
             "1" : "https://drive.google.com/uc?id=1QQ_MJ_PlldTFD_R4KV0xReuwulrZZMH0",
             "2" : "https://drive.google.com/uc?id=1Dy8T_86WH2b5ZJakiNVOwXGkFB6SrjfK",
-            "3" : "imgur.example2.com",
-            "4" : "imgur.example2.com"
+            "3" : "https://drive.google.com/uc?id=1zROgtliJRAMKYYqxF65J_hQMj_Kqjs0d",
+            "4" : "https://drive.google.com/uc?id=1uratfNsJo0TPsQjT0-aMI5XS8KldCTaO"
         },
-        "spec_subheading_topic_name2" : {
-            "imgURL1" : "imgur.example1.com",
-            "imgURL2" : "imgur.example1.com"
+        "programming" : {
+            "1" : "https://drive.google.com/uc?id=1np2NuZR97eRf7WecxnM0Ja1-CtThry9T",
+            "2" : "https://drive.google.com/uc?id=1XCRHdkvxeHD9cq26MdzGx2yh0sY-T48k",
+            "3" : "https://drive.google.com/uc?id=1tN7AgMokOVtqTC6WBI48vS9G_I3swK4U",
+            "4" : "https://drive.google.com/uc?id=1l55WrqlfYQjgK4qYIGByNeMswpauM9HY",
+            "5" : "https://drive.google.com/uc?id=1vXK4tEHnynlxIUZdLeds5ls2UbMcMEyi",
+            "6" : "https://drive.google.com/uc?id=1nL8TN5VIfZgPo9gQp3DSxAQxcr3scCdu",
+            "7" : "https://drive.google.com/uc?id=14r-aS2GZ5fMCGXCWGy9Gbwm-Zhwggq4d",
+            "8" : "https://drive.google.com/uc?id=1yFSlQpavO7hOtjK2BmZkxxAN_Hpyoycs",
+            "9" : "https://drive.google.com/uc?id=19o6iJbh3gruxfRlv11dNhj8fcCOkXkdT",
+            "10" : "https://drive.google.com/uc?id=1j06-vq4HY1g3ryfWNeek4J43CMUlSTl5",
+            "11" : "https://drive.google.com/uc?id=1ouu1pHyOqiGUOljFSY7m_M_uzun48hoq",
+            "12" : "https://drive.google.com/uc?id=1n1YFfDFQuq-uEeq971qsQpkH3jfCKHEA",
+            "13" : "https://drive.google.com/uc?id=1NSC2X-N-4I7BLIqU4CgVzTwoUrcSW17w"
+        },
+        "data_rep" : {
+            "1" : "https://drive.google.com/uc?id=1x1W3_Kkjp46NSsMSbJTkaAQy_FrHZPKf",
+            "2" : "https://drive.google.com/uc?id=14RzSwuIhFik06JmG-3h_w_BV7RkI3yOa",
+            "3" : "https://drive.google.com/uc?id=1lwnRSpOJgFb1jGQ5r8kCjD8RWLsLlLlu",
+            "4" : "https://drive.google.com/uc?id=1YSdwO9X_k9KXX7yXuxDAz-cJfa0j07dC",
+            "5" : "https://drive.google.com/uc?id=1vT7Em8yvzCqlPfOO3CKKAIRL0QBAM0Lf",
+            "6" : "https://drive.google.com/uc?id=10w6g3uTv-zly3Vc6yXrTp6unJaSdhcKZ",
+            "7" : "https://drive.google.com/uc?id=1HpVX69Du8MmP-Xi5yxrpcG-yNWaM-drr",
+            "8" : "https://drive.google.com/uc?id=1JJtGh-Ojh3tufGYmtulADnu_8ATYDY2U"
+        },
+        "comp_systems" : {
+
         }
     },
     "cheetsheet" : {
-        "imgURL1" : "imgur.example1.com"
+        "1" : "https://cdn.discordapp.com/attachments/536598167169269761/664889992157462568/AQA_8520_CS_SPEC_2017.PDF"
     }
 }
