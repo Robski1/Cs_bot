@@ -1,12 +1,17 @@
 {
-    "spec_areas": {
-        "spec_subheading_topic_name1" : {
-            "imgURL1" : "imgur.example1.com",
-            "imgURL2" : "imgur.example2.com"
+    "spec": {
+        "algorithms" : {
+            "1" : "https://drive.google.com/uc?id=1QQ_MJ_PlldTFD_R4KV0xReuwulrZZMH0",
+            "2" : "https://drive.google.com/uc?id=1Dy8T_86WH2b5ZJakiNVOwXGkFB6SrjfK",
+            "3" : "imgur.example2.com",
+            "4" : "imgur.example2.com"
         },
         "spec_subheading_topic_name2" : {
             "imgURL1" : "imgur.example1.com",
             "imgURL2" : "imgur.example1.com"
         }
+    },
+    "cheetsheet" : {
+        "imgURL1" : "imgur.example1.com"
     }
 }
