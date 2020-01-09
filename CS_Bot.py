@@ -31,9 +31,15 @@ async def on_ready():
 @bot.command()
 async def spec (ctx, *args):
     command = specification(ctx, "spec", args[0], args[1])
-    if args[0] == "algorithms":
-        if args[1] == "1":
-            await command.showSpec()
+    try:
+        await command.showSpec()
+    except:
+        embed = discord.Embed(
+                colour = discord.Colour.blurple(),
+                description = "Invalid command! Please do /help for a list of valid commands.",
+                )
+        embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
+        await ctx.send(embed=embed)
 
 with open("token.txt","r") as token:
     token=token.read()
