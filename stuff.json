@@ -1,0 +1,12 @@
+{
+    "spec_areas": {
+        "spec_subheading_topic_name1" : {
+            "imgURL1" : "imgur.example1.com",
+            "imgURL2" : "imgur.example2.com"
+        },
+        "spec_subheading_topic_name2" : {
+            "imgURL1" : "imgur.example1.com",
+            "imgURL2" : "imgur.example1.com"
+        }
+    }
+}
