@@ -60,6 +60,19 @@
         "1" : "https://drive.google.com/uc?id=1b8J1ms5x83WWRQvj0qTDYLc2eRH51Rdf",
         "2" : "https://drive.google.com/uc?id=1E1reFUkygeho4aeRYo1F0DHtsrIRDXgb",
         "3" : "https://drive.google.com/uc?id=1GFWJGrgDUWowN-APZ0Ia1lCyJVj1bqap",
-        "4" : "https://drive.google.com/uc?id=16iZn3CdV-3bADt7YjWQm7qmH_TLASfB_"
+        "4" : "https://drive.google.com/uc?id=16iZn3CdV-3bADt7YjWQm7qmH_TLASfB_",
+        "5" : "https://cdn.discordapp.com/attachments/487334311389954060/642074871039524885/CS_Cheat_Sheet_UPDATED.pdf",
+    },
+    "Questions" : {
+        "Algorithms" : {
+            "Question" : {
+                "1" : "https://drive.google.com/open?id=1KMCdhxPRfnt1jDgylsVV3BXxAYziPswu",
+                "2" : "https://drive.google.com/open?id=1-YJaMUnhKaXZiyWkzsmTDX0hLXvNszKd",
+                "3" : "https://drive.google.com/open?id=1v2Gp7vPMWs1kqKcaTHpjX6vyAFcaTFML",
+                "4" : "https://drive.google.com/open?id=1pnVKZ2R18mLkWBycNeLQStJZ_ZRSVuhf",
+                "5" : "https://drive.google.com/open?id=11KhSZ1y69BYiK-elKmWwzN3O959kvedU",
+                "6" : "https://drive.google.com/open?id=1P0-tvjZo4_ZI1mdeMKWPugPsqjY7zUlD"           
+            }
+        }
     }
 }
