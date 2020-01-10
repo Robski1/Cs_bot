@@ -24,7 +24,7 @@ class specification:
         embed.set_author(name=self.ctx.author.name, icon_url=self.ctx.author.avatar_url)
         await self.ctx.send(embed=embed)
 
-class cheatsheet:
+class cheat:
     def __init__(self,ctx):
         self.ctx = ctx
     async def showCheatsheet(self):
@@ -57,8 +57,8 @@ async def spec (ctx, *args):
         await ctx.send(embed=embed)
 
 @bot.command()
-async def cheat(ctx):
-    command = cheatsheet(ctx)
+async def cheatsheet(ctx):
+    command = cheat(ctx)
     try:
         await command.showCheatsheet()
     except:
