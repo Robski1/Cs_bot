@@ -32,10 +32,31 @@
             "8" : "https://drive.google.com/uc?id=1JJtGh-Ojh3tufGYmtulADnu_8ATYDY2U"
         },
         "comp_systems" : {
-
+            "1" : "https://drive.google.com/uc?id=1rMle7MBYVE8VOnhDUx_Pf0MHQDzdwE1Y",
+            "2" : "https://drive.google.com/uc?id=1QsD8uB9iGfp15a7A-Fge6-bLPEK4-NiG",
+            "3" : "https://drive.google.com/uc?id=1l1fJu3l9ssrlb3eXxQbMZ9AfNBhXn11z",
+            "4" : "https://drive.google.com/uc?id=1R8H8R0YLLPNobrz_u-RQNp0pjGu76LLt",
+            "5" : "https://drive.google.com/uc?id=19_6tM1Dvt440KhIKr-Dn5pEKUr6RBMfn"
+        },
+        "comp_networks" : {
+            "1" : "https://drive.google.com/uc?id=1JcaXeJ7PdUNsIlv-W9paFyZJjWXVzNyd",
+            "2" : "https://drive.google.com/uc?id=1xLcdFFLRQsKB7DlXxjGz1myMZ3tP8QQ5",
+            "3" : "https://drive.google.com/uc?id=1HpByvnLHNt6rbv5oKWh24wZvAUn_r-c7"
+        },
+        "cyber_security" : {
+            "1" : "https://drive.google.com/uc?id=1rIQ_iEBuLvM5KYUffXN_DGD4QKMbAWvI"
+        },
+        "cyber_threats" : {
+            "1" : "https://drive.google.com/uc?id=14Z3rFwlCmGU__0ZA1EuqeLBPkQi0C-A-",
+            "2" : "https://drive.google.com/uc?id=1kc41Ut8iiVKOMbcXuT8Lst_X4ggXUkKM",
+            "3" : "https://drive.google.com/uc?id=1vXHi66welk2raRE6WaRzx-S3x59QKXIl",
+            "4" : "https://drive.google.com/uc?id=1ll2cVY8qJbZlpljYB67Yl0Bw1JA4on2g"
+        },
+        "ele" : {
+            "1" : "https://drive.google.com/uc?id=1_KHnx2aIla9AqoY8qIMg89K9nsm1P2Y1"
         }
     },
-    "cheetsheet" : {
+    "cheatsheet" : {
         "1" : "https://cdn.discordapp.com/attachments/536598167169269761/664889992157462568/AQA_8520_CS_SPEC_2017.PDF"
     }
 }
