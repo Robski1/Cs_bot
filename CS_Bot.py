@@ -24,6 +24,21 @@ class specification:
         embed.set_author(name=self.ctx.author.name, icon_url=self.ctx.author.avatar_url)
         await self.ctx.send(embed=embed)
 
+class cheatsheet:
+    def __init__(self,ctx):
+        self.ctx = ctx
+    async def showCheatsheet(self):
+        await self.ctx.send("Here is the cheat sheet:")
+        for i in range(1,5):
+            embed = discord.Embed(
+                    colour = discord.Colour.red(),
+                    )
+            embed.set_footer(text="Do .help for a list of commands")
+            embed.set_image(url=constants.stuff["cheatsheet"]["{0}".format(i)])
+            embed.set_author(name=self.ctx.author.name, icon_url=self.ctx.author.avatar_url)
+            await self.ctx.send(embed=embed)
+        
+
 @bot.event
 async def on_ready():
     print("Bot is online ")
@@ -41,6 +56,19 @@ async def spec (ctx, *args):
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
+@bot.command()
+async def cheat(ctx):
+    command = cheatsheet(ctx)
+    try:
+        await command.showCheatsheet()
+    except:
+        embed = discord.Embed(
+                colour = discord.Colour.blurple(),
+                description = "Invalid command! Please do /help for a list of valid commands.",
+                )
+        embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
+        await ctx.send(embed=embed)
+    
 with open("token.txt","r") as token:
     token=token.read()
     bot.run(token)
