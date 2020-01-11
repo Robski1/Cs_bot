@@ -59,7 +59,7 @@ class Exam_Questions:
 async def errorMsg(ctx):
     embed = discord.Embed(
             colour = discord.Colour.blurple(),
-            description = "Invalid command! Please do .help for a list of valid commands.",
+            description = ":no_entry_sign: Invalid command! Please do .help for a list of valid commands.",
             )
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     await ctx.send(embed=embed)
