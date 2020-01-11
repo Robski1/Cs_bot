@@ -61,17 +61,41 @@
         "2" : "https://drive.google.com/uc?id=1E1reFUkygeho4aeRYo1F0DHtsrIRDXgb",
         "3" : "https://drive.google.com/uc?id=1GFWJGrgDUWowN-APZ0Ia1lCyJVj1bqap",
         "4" : "https://drive.google.com/uc?id=16iZn3CdV-3bADt7YjWQm7qmH_TLASfB_",
-        "5" : "https://cdn.discordapp.com/attachments/487334311389954060/642074871039524885/CS_Cheat_Sheet_UPDATED.pdf",
+        "5" : "https://cdn.discordapp.com/attachments/487334311389954060/642074871039524885/CS_Cheat_Sheet_UPDATED.pdf"
     },
     "Questions" : {
-        "Algorithms" : {
+        "programming" : {
             "Question" : {
-                "1" : "https://drive.google.com/open?id=1KMCdhxPRfnt1jDgylsVV3BXxAYziPswu",
-                "2" : "https://drive.google.com/open?id=1-YJaMUnhKaXZiyWkzsmTDX0hLXvNszKd",
-                "3" : "https://drive.google.com/open?id=1v2Gp7vPMWs1kqKcaTHpjX6vyAFcaTFML",
-                "4" : "https://drive.google.com/open?id=1pnVKZ2R18mLkWBycNeLQStJZ_ZRSVuhf",
-                "5" : "https://drive.google.com/open?id=11KhSZ1y69BYiK-elKmWwzN3O959kvedU",
-                "6" : "https://drive.google.com/open?id=1P0-tvjZo4_ZI1mdeMKWPugPsqjY7zUlD"           
+                "1" : "https://drive.google.com/uc?id=1KMCdhxPRfnt1jDgylsVV3BXxAYziPswu",
+                "2" : "https://drive.google.com/uc?id=1-YJaMUnhKaXZiyWkzsmTDX0hLXvNszKd",
+                "3" : "https://drive.google.com/uc?id=1v2Gp7vPMWs1kqKcaTHpjX6vyAFcaTFML",
+                "4" : "https://drive.google.com/uc?id=1pnVKZ2R18mLkWBycNeLQStJZ_ZRSVuhf",
+                "5" : "https://drive.google.com/uc?id=11KhSZ1y69BYiK-elKmWwzN3O959kvedU",
+                "6" : "https://drive.google.com/uc?id=1P0-tvjZo4_ZI1mdeMKWPugPsqjY7zUlD",
+                "7" : "https://drive.google.com/uc?id=1T7svah24SHi2uk2WcTkNgSSf84xM8pRV",
+                "8" : "https://drive.google.com/uc?id=16PKOafri5PonaJ0YeY3JP3xihcH40are",
+                "9" : "https://drive.google.com/uc?id=1u2XTX6tObLY0lqh5T_4m0cIgLXFoPND8",
+                "10" : "https://drive.google.com/uc?id=1sqI3z9nVZmf2i-e5RuoZK8ugukWzwiSO",
+                "11" : "https://drive.google.com/uc?id=1ZIZHpckNGuOGtKlNB9cc_gObWPpzTmA6",
+                "12" : "https://drive.google.com/uc?id=1glwziN-Sonb4-P1HeI9NGJaf9kOJhmyY",
+                "13" : "https://drive.google.com/uc?id=1BNSmY-uuxIrb2bU614WKtOBDk5whNHVE",
+                "14" : "https://drive.google.com/uc?id=1b3rJFsZqXtEFkmTAH3fr3kUjV0Yuq-vT"           
+            },
+            "Answer" : {
+                "1" : "https://drive.google.com/uc?id=1Z1hWcjl4SnXZUOFHgBJ69knRKrUN7nyE",
+                "2" : "https://drive.google.com/uc?id=14-bzVb_3817G5FBxhwYRu4y59VI9yV-y",
+                "3" : "https://drive.google.com/uc?id=1YSD6kKjl0OH0fICsPqx6gDD8UO03cbII",
+                "4" : "https://drive.google.com/uc?id=17ZL00wQRhR4h8uVMXUyxciL5R5LfVW-m",
+                "5" : "https://drive.google.com/uc?id=1sBAF2CWbzyeW_0D0rw5hMCKIRLzBVWR-",
+                "6" : "https://drive.google.com/uc?id=1y5TYJJeKE1IrSa4Si8BgMqwzCVZDcDT5",
+                "7" : "https://drive.google.com/uc?id=1oFlpg_m72H8bBhLPYXtQVnTfFVf9gLIc",
+                "8" : "https://drive.google.com/uc?id=1zT08S-ma25Aej9yvZ1KdScDJWAZY3pvX",
+                "9" : "https://drive.google.com/uc?id=1ykWJP8YcjmMV8qkznink66s_vRpJt_WF",
+                "10" : "https://drive.google.com/uc?id=1Cj0fz1FzZ7VDQkKOzq0ogBBj_psimqDK",
+                "11" : "https://drive.google.com/uc?id=1SNQ1rR_6lsoAeO0i86trdOTHqr3yuP4H",
+                "12" : "https://drive.google.com/uc?id=1X533RXF35iUUKLqb0_3ZbIOGgr1FeSuX",
+                "13" : "https://drive.google.com/uc?id=1cdHSprmjD6-fAvWPOKe4Selk22pUXLG-",
+                "14" : "https://drive.google.com/uc?id=1pqPaTg3D_n4cFDb_i4FGdvywfvFcmhAB"
             }
         }
     }
