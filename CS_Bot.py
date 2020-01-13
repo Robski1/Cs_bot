@@ -68,6 +68,7 @@ async def errorMsg(ctx):
 
 @bot.event
 async def on_ready():
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game(".help"))
     print("Bot is online ")
 
 #### SPEC COMMAND ####
@@ -77,6 +78,17 @@ async def spec(ctx, *args):
     try:
         command = specification(ctx, "spec", args[0], args[1])
         await command.showSpec()
+    except:
+        return await errorMsg(ctx)
+
+#### QUESTION COMMAND ####
+
+@bot.command()
+async def question(ctx, *args):
+    try:
+        number = str(random.randint(1, (len(constants.stuff["Questions"][args[0]]["Question"]))-1))
+        command = Exam_Questions(ctx, args[0], number)
+        await command.ShowQuestion()
     except:
         return await errorMsg(ctx)
 
@@ -90,41 +102,49 @@ async def cheatsheet(ctx):
             )
     await ctx.send(embed=embed)
 
-#### QUESTION COMMAND ####
-
-@bot.command()
-async def question(ctx, *args):    
-    try:
-        number = str(random.randint(1, (len(constants.stuff["Questions"][args[0]]["Question"]))-1))
-        command = Exam_Questions(ctx, args[0], number)
-        await command.ShowQuestion()
-    except:
-        return await errorMsg(ctx)
-
 #### HELP COMMAND ####
 
 @bot.command()
 async def help(ctx, *args):
     if len(args) < 1 or args[0] == "1":
         embed = discord.Embed(
-                colour = discord.Colour.blurple(),
+                colour = discord.Colour.blue(),
                 description = "<@{0}> We have sent you a list of commands! Please check your DMs.".format(ctx.author.id),
                 )
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
         
         embed = discord.Embed(
-                colour = discord.Colour.blurple(),
-                description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.cheatsheet**\n`See the cheatsheet`\n",
+                colour = discord.Colour.blue(),
+                description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.question**\n`EXAMPLE: .question programming`\n`Do .help question to view subcommands in .question`\n\n**.cheatsheet**\n`See the cheatsheet`\n",
                 )
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.author.send(embed=embed)
     
+    elif args[0] == "question":
+            if len(args) == 1:
+                embed = discord.Embed(
+                        colour = discord.Colour.blue(),
+                        description = "<@{0}> We have sent you a list of commands! Please check your DMs.".format(ctx.author.id),
+                        )
+                embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
+                await ctx.send(embed=embed)
+
+                embed = discord.Embed(
+                        colour=discord.Colour.blue(),
+                        title="The topics are:",
+                        description="1) algorithms\n2) programming\n3) data_rep\n4) comp_systems\n5) comp_networks\n6) cyber_security\n7) cyber_threats\n 8) ele\n\n`Do .question [topic] to recieve a random question based on the chosen topic`\n`**PLEASE NOTE: WE ONLY HAVE QUESTIONS FOR PROGRAMMING AT THE MOMENT**`"
+                )
+                embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
+                await ctx.author.send(embed=embed)
+            else:
+                return await errorMsg(ctx)
+
     elif args[0] == "spec":
         if len(args) == 2:
             if args[1] == "algorithms":
                 embed = discord.Embed(
-                        colour=discord.Colour.blurple(),
+                        colour=discord.Colour.blue(),
                         title="The subcommands for .spec algorithms:",
                         description="**.spec algorithms 1**\tRepresenting algorithms\n**.spec algorithms 2**\tEfficiency of algorithms\n**.spec algorithms 3**\tSearching algorithms\n**.spec algorithms 4**\tSorting algorithms"
                         )
@@ -133,7 +153,7 @@ async def help(ctx, *args):
             
             elif args[1] == "programming":
                 embed = discord.Embed(
-                        colour=discord.Colour.blurple(),
+                        colour=discord.Colour.blue(),
                         title="The subcommands for .spec programming:",
                         description="""**.spec programming 1**\tData types\n**.spec programming 2**\tProgramming concepts\n**.spec programming 3**\tArithmetic operations\n**.spec programming 4**\tRelational operations
                                     **.spec programming 5**\tBoolean operations\n**.spec programming 6**\tData structures\n**.spec programming 7**\tInput/output and file handling\n**.spec programming 8**\tString handling operations
@@ -146,7 +166,7 @@ async def help(ctx, *args):
             
             elif args[1] == "data_rep":
                 embed = discord.Embed(
-                        colour=discord.Colour.blurple(),
+                        colour=discord.Colour.blue(),
                         title="The subcommands for .spec data_rep:",
                         description="""**.spec data_rep 1**\tNumber bases\n**.spec data_rep 2**\tConverting between number bases\n**.spec data_rep 3**\tUnits of information\n**.spec data_rep 4**\tBinary arithmetic
                                     **.spec data_rep 5**\tCharacter encoding\n**.spec data_rep 6**\tRepresenting images\n**.spec data_rep 7**\tRepresenting sound\n**.spec data_rep 8**\tData compression
@@ -157,7 +177,7 @@ async def help(ctx, *args):
 
             elif args[1] == "comp_systems":
                 embed = discord.Embed(
-                        colour=discord.Colour.blurple(),
+                        colour=discord.Colour.blue(),
                         title="The subcommands for .spec comp_systems:",
                         description="""**.spec comp_systems 1**\tHardware and software\n**.spec comp_systems 2**\tBoolean logic\n**.spec comp_systems 3**\tSoftware classification\n**.spec comp_systems 4**\tSystem architecture
                                     **.spec comp_systems 5**\tSystem architecture (2)
@@ -168,7 +188,7 @@ async def help(ctx, *args):
 
             elif args[1] == "comp_networks":
                 embed = discord.Embed(
-                        colour=discord.Colour.blurple(),
+                        colour=discord.Colour.blue(),
                         title="The subcommands for .spec comp_networks:",
                         description="**.spec comp_networks 1**\tFundamentals of computer networks\n**.spec comp_networks 2**\tFundamentals of computer networks (2)\n**.spec comp_networks 3**\tFundamentals of computer networks (3)"
                         )
@@ -177,7 +197,7 @@ async def help(ctx, *args):
 
             elif args[1] == "cyber_security":
                 embed = discord.Embed(
-                        colour=discord.Colour.blurple(),
+                        colour=discord.Colour.blue(),
                         title="The subcommands for .spec cyber_security:",
                         description="**.spec cyber_security 1**\tFundamentals of cyber security"
                         )
@@ -186,7 +206,7 @@ async def help(ctx, *args):
 
             elif args[1] == "cyber_threats":
                 embed = discord.Embed(
-                        colour=discord.Colour.blurple(),
+                        colour=discord.Colour.blue(),
                         title="The subcommands for .spec cyber_threats:",
                         description="**.spec cyber_threats 1**\tCyber security threats\n**.spec cyber_threats 2**\tSocial engineering\n**.spec cyber_threats 3**\tMalicious code\n**.spec cyber_threats 4**\tMethods to detect and prevent cyber security threats"
                                     
@@ -196,7 +216,7 @@ async def help(ctx, *args):
 
             elif args[1] == "ele":
                 embed = discord.Embed(
-                        colour=discord.Colour.blurple(),
+                        colour=discord.Colour.blue(),
                         title="The subcommands for .spec data_rep:",
                         description="**.spec ele 1**\tEthical, legal and environmental impacts of digital technology on wider society, including issues of privacy"
                         )
@@ -205,18 +225,17 @@ async def help(ctx, *args):
 
             else:
                 return await errorMsg(ctx)
-
         else:
             if len(args) == 1:
                 embed = discord.Embed(
-                        colour = discord.Colour.blurple(),
+                        colour = discord.Colour.blue(),
                         description = "<@{0}> We have sent you a list of commands! Please check your DMs.".format(ctx.author.id),
                         )
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.send(embed=embed)
 
                 embed = discord.Embed(
-                        colour=discord.Colour.blurple(),
+                        colour=discord.Colour.blue(),
                         title="The topics are:",
                         description="1) algorithms\n2) programming\n3) data_rep\n4) comp_systems\n5) comp_networks\n6) cyber_security\n7) cyber_threats\n 8) ele\n\n`Do .help spec [topic] to view commands for each topic`\n`EXAMPLE: .help spec algorithms`"
                 )
@@ -224,11 +243,12 @@ async def help(ctx, *args):
                 await ctx.author.send(embed=embed)
             else:
                 return await errorMsg(ctx)
+
     else:
         return await errorMsg(ctx)
 
 #### RUN TOKEN ####
 
-with open("token.txt","r") as token:
-    token=token.read()
+with open("token.txt", "r") as token:
+    token = token.read()
     bot.run(token)
