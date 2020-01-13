@@ -19,7 +19,7 @@ class specification:
 
     async def showSpec(self):
         embed = discord.Embed(
-                colour = discord.Colour.blurple(),
+                colour = discord.Colour.teal(),
                 description = "Here is part of the specification you have requested:",
                 )
         embed.set_footer(text="Do .help for a list of commands")
@@ -58,7 +58,7 @@ class Exam_Questions:
 
 async def errorMsg(ctx):
     embed = discord.Embed(
-            colour = discord.Colour.blurple(),
+            colour = discord.Colour.red(),
             description = ":no_entry_sign: Invalid command! Please do .help for a list of valid commands.",
             )
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
@@ -68,7 +68,6 @@ async def errorMsg(ctx):
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(status=discord.Status.online, activity=discord.Game(".help"))
     print("Bot is online ")
 
 #### SPEC COMMAND ####
@@ -81,26 +80,27 @@ async def spec(ctx, *args):
     except:
         return await errorMsg(ctx)
 
-#### QUESTION COMMAND ####
-
-@bot.command()
-async def question(ctx,*, topic):
-    try:
-        number = str(random.randint(1, (len(constants.stuff["Questions"][topic]["Question"]))-1))
-        command = Exam_Questions(ctx, topic, number)
-        await command.ShowQuestion()
-    except:
-        return await errorMsg(ctx)
-
 #### CHEATSHEET COMMAND ####
 
 @bot.command()
 async def cheatsheet(ctx):
     embed = discord.Embed(
-            colour = discord.Colour.blurple(),
+            colour = discord.Colour.teal(),
             description = "Here is the cheatsheet: "+constants.stuff["cheatsheet"]["5"],
             )
     await ctx.send(embed=embed)
+
+#### QUESTION COMMAND ####
+
+@bot.command()
+async def question(ctx, *args):
+    
+    try:
+        number = str(random.randint(1, (len(constants.stuff["Questions"][args[0]]["Question"]))-1))
+        command = Exam_Questions(ctx, args[0], number)
+        await command.ShowQuestion()
+    except:
+        return await errorMsg(ctx)
 
 #### HELP COMMAND ####
 
@@ -116,30 +116,11 @@ async def help(ctx, *args):
         
         embed = discord.Embed(
                 colour = discord.Colour.blurple(),
-                description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.question**\n`EXAMPLE: .question programming`\n`Do .help question to view subcommands in .question`\n\n**.cheatsheet**\n`See the cheatsheet`\n",
+                description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.cheatsheet**\n`See the cheatsheet`\n",
                 )
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.author.send(embed=embed)
     
-    elif args[0] == "question":
-            if len(args) == 1:
-                embed = discord.Embed(
-                        colour = discord.Colour.blurple(),
-                        description = "<@{0}> We have sent you a list of commands! Please check your DMs.".format(ctx.author.id),
-                        )
-                embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-                await ctx.send(embed=embed)
-
-                embed = discord.Embed(
-                        colour=discord.Colour.blurple(),
-                        title="The topics are:",
-                        description="1) algorithms\n2) programming\n3) data_rep\n4) comp_systems\n5) comp_networks\n6) cyber_security\n7) cyber_threats\n 8) ele\n\n`Do .question [topic] to recieve a random question based on the chosen topic`\n`**PLEASE NOTE: WE ONLY HAVE QUESTIONS FOR PROGRAMMING AT THE MOMENT**`"
-                )
-                embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-                await ctx.author.send(embed=embed)
-            else:
-                return await errorMsg(ctx)
-
     elif args[0] == "spec":
         if len(args) == 2:
             if args[1] == "algorithms":
@@ -225,6 +206,7 @@ async def help(ctx, *args):
 
             else:
                 return await errorMsg(ctx)
+
         else:
             if len(args) == 1:
                 embed = discord.Embed(
@@ -243,7 +225,6 @@ async def help(ctx, *args):
                 await ctx.author.send(embed=embed)
             else:
                 return await errorMsg(ctx)
-
     else:
         return await errorMsg(ctx)
 
