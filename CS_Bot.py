@@ -93,8 +93,7 @@ async def cheatsheet(ctx):
 #### QUESTION COMMAND ####
 
 @bot.command()
-async def question(ctx, *args):
-    
+async def question(ctx, *args):    
     try:
         number = str(random.randint(1, (len(constants.stuff["Questions"][args[0]]["Question"]))-1))
         command = Exam_Questions(ctx, args[0], number)
