@@ -116,7 +116,7 @@ async def help(ctx, *args):
         
         embed = discord.Embed(
                 colour = discord.Colour.blue(),
-                description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.question**\n`EXAMPLE: .question programming`\n`Do .help question to view subcommands in .question`\n\n**.cheatsheet**\n`See the cheatsheet`\n**.help**\n `EXAMPLE: .help [command]`\n`View help page for the different help commands`",
+                description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.question**\n`EXAMPLE: .question programming`\n`Do .help question to view subcommands in .question`\n\n**.cheatsheet**\n`See the cheatsheet`\n\n**.help**\n `EXAMPLE: .help [command]`\n`View help page for the different help commands`",
                 )
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.author.send(embed=embed)
