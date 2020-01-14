@@ -76,7 +76,7 @@ async def on_ready():
 @bot.command()
 async def spec(ctx, *args):
     try:
-        command = specification(ctx, "spec", args[0], args[1])
+        command = specification(ctx, "spec", args[0].lower(), args[1])
         await command.showSpec()
     except:
         return await errorMsg(ctx)
@@ -86,8 +86,8 @@ async def spec(ctx, *args):
 @bot.command()
 async def question(ctx, *args):
     try:
-        number = str(random.randint(1, (len(constants.stuff["Questions"][args[0]]["Question"]))-1))
-        command = Exam_Questions(ctx, args[0], number)
+        number = str(random.randint(1, (len(constants.stuff["Questions"][args[0].lower()]["Question"]))-1))
+        command = Exam_Questions(ctx, args[0].lower(), number)
         await command.ShowQuestion()
     except:
         return await errorMsg(ctx)
