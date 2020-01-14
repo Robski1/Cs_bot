@@ -248,7 +248,7 @@ async def help(ctx, *args):
         return await errorMsg(ctx)
 
 #### RUN TOKEN ####
-
+### using the token.txt file
 with open("token.txt", "r") as token:
     token = token.read()
     bot.run(token)
