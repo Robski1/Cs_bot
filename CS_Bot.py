@@ -5,7 +5,7 @@ from constants import constants
 import asyncio
 import json
 import random
-bot = commands.Bot(command_prefix = ".")
+bot = commands.Bot(command_prefix = ".", case_insensitive=True)
 bot.remove_command("help")
 
 #### SPECIFICATION CLASS ####
@@ -116,12 +116,12 @@ async def help(ctx, *args):
         
         embed = discord.Embed(
                 colour = discord.Colour.blue(),
-                description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.question**\n`EXAMPLE: .question programming`\n`Do .help question to view subcommands in .question`\n\n**.cheatsheet**\n`See the cheatsheet`\n",
+                description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.question**\n`EXAMPLE: .question programming`\n`Do .help question to view subcommands in .question`\n\n**.cheatsheet**\n`See the cheatsheet`\n**.help**\n `EXAMPLE: .help [command]\n`View help page for the different help commands`",
                 )
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.author.send(embed=embed)
     
-    elif args[0] == "question":
+    elif args[0].upper() == "QUESTION":
             if len(args) == 1:
                 embed = discord.Embed(
                         colour = discord.Colour.blue(),
@@ -133,16 +133,16 @@ async def help(ctx, *args):
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
                         title="The topics are:",
-                        description="1) algorithms\n2) programming\n3) data_rep\n4) comp_systems\n5) comp_networks\n6) cyber_security\n7) cyber_threats\n 8) ele\n\n`Do .question [topic] to recieve a random question based on the chosen topic`\n`**PLEASE NOTE: WE ONLY HAVE QUESTIONS FOR PROGRAMMING AT THE MOMENT**`"
+                        description="1) algorithms\n2) programming\n3) data_rep\n4) comp_systems\n5) comp_networks\n6) cyber_security\n7) cyber_threats\n 8) ele\n\n`Do .question [topic] to recieve a random question based on the chosen topic`\n"
                 )
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
             else:
                 return await errorMsg(ctx)
 
-    elif args[0] == "spec":
+    elif args[0].upper() == "SPEC":
         if len(args) == 2:
-            if args[1] == "algorithms":
+            if args[1].upper() == "ALGORITHMS":
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
                         title="The subcommands for .spec algorithms:",
@@ -151,7 +151,7 @@ async def help(ctx, *args):
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
             
-            elif args[1] == "programming":
+            elif args[1].upper() == "PROGRAMMING":
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
                         title="The subcommands for .spec programming:",
@@ -164,7 +164,7 @@ async def help(ctx, *args):
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
             
-            elif args[1] == "data_rep":
+            elif args[1].upper() == "DATA_REP":
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
                         title="The subcommands for .spec data_rep:",
@@ -175,7 +175,7 @@ async def help(ctx, *args):
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
 
-            elif args[1] == "comp_systems":
+            elif args[1].upper() == "COMP_SYSTEMS":
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
                         title="The subcommands for .spec comp_systems:",
@@ -186,7 +186,7 @@ async def help(ctx, *args):
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
 
-            elif args[1] == "comp_networks":
+            elif args[1].upper() == "COMP_NETWORKS":
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
                         title="The subcommands for .spec comp_networks:",
@@ -195,7 +195,7 @@ async def help(ctx, *args):
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
 
-            elif args[1] == "cyber_security":
+            elif args[1].upper() == "CYBER_SECURITY":
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
                         title="The subcommands for .spec cyber_security:",
@@ -204,7 +204,7 @@ async def help(ctx, *args):
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
 
-            elif args[1] == "cyber_threats":
+            elif args[1].upper() == "CYBER_THREATS":
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
                         title="The subcommands for .spec cyber_threats:",
@@ -214,7 +214,7 @@ async def help(ctx, *args):
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
 
-            elif args[1] == "ele":
+            elif args[1].upper() == "ELE":
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
                         title="The subcommands for .spec data_rep:",
