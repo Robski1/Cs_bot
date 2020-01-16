@@ -247,6 +247,43 @@ async def help(ctx, *args):
     else:
         return await errorMsg(ctx)
 
+    
+#### COUNTDOWN ####
+@bot.command()
+async def timeLeft(ctx):
+    def dateDiffInSeconds(date1, date2):
+      timedelta = date2 - date1
+      return timedelta.days * 24 * 3600 + timedelta.seconds
+
+    def daysHoursMinutesSecondsFromSeconds(seconds):
+            minutes, seconds = divmod(seconds, 60)
+            hours, minutes = divmod(minutes, 60)
+            days, hours = divmod(hours, 24)
+            return (days, hours, minutes, seconds)
+
+    while True:
+        leaving_date = datetime.strptime('11-05-2020 01:00:00', '%d-%m-%Y %H:%M:%S')
+        #now = datetime.strptime('01-01-2019 01:00:00', '%d-%m-%Y %H:%M:%S')
+        now = datetime.now()
+        dateFormat = daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date))
+        timeLeft = (("%d days, %d hours, %d minutes, %d seconds") % dateFormat)+ ' left till CS Paper 1'
+
+
+
+        seconds = 86400 ## 1 day = 86400
+        
+        for i in range(0,86401):
+            
+            if i == 1:
+                embed = discord.Embed(
+                colour = discord.Colour.red(),
+                description = timeLeft,
+                )
+                await ctx.send(embed=embed)
+
+            time.sleep(1)
+            
+            
 #### RUN TOKEN ####
 
 with open("token.txt", "r") as token:
