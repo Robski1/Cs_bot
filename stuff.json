@@ -64,6 +64,38 @@
         "5" : "https://cdn.discordapp.com/attachments/487334311389954060/642074871039524885/CS_Cheat_Sheet_UPDATED.pdf"
     },
     "Questions" : {
+        "algorithms" : {
+            "Question" : {
+                "1" : "https://drive.google.com/uc?id=1ms-SnpH2y9YjNCUstJVkOXt3FZxCMeTc",
+                "2" : "https://drive.google.com/uc?id=1Ci9F4I5pNzS55SvPHSNvoEC9HcOHVzDI",
+                "3" : "https://drive.google.com/uc?id=1DuwLWHD4zIDmbmhwvJj1rV07pmNftqR_",
+                "4" : "https://drive.google.com/uc?id=148hZcY72yzrFiwmSNij_Kw63oIKdx2EI",
+                "5" : "https://drive.google.com/uc?id=1GzpkD1N_5re6xRDdCS9glBCFDRezxG2Z",
+                "6" : "https://drive.google.com/uc?id=1gSkzYdJV-AFcpG6m52Ca96Agm7uikPxi",
+                "7" : "https://drive.google.com/uc?id=1HoYA6gLypLYOdOrbCPdiyqxuQCkCtqC9",
+                "8" : "https://drive.google.com/uc?id=1vpY4jmH8XSNUXl0eJu00VET37HNI17Z0",
+                "9" : "https://drive.google.com/uc?id=1cnqdZ9PeslsoVKwN8i6zSJ5-oj8yyilJ",
+                "10" : "https://drive.google.com/uc?id=1Cgz2NDthrSpp26UnRj6ysox_Try1XgZl",
+                "11" : "https://drive.google.com/uc?id=1vDBTNEzk1LayHvPlLMAzUitA66QA8M89",
+                "12" : "https://drive.google.com/uc?id=118YgaxMcnehD_rXypjgebhNsLyCwVS6W",
+                "13" : "https://drive.google.com/uc?id=1R7n9lnO021rTIHlleeZ7MjxCwKdA36UQ"           
+            },
+            "Answer" : {
+                "1" : "https://drive.google.com/uc?id=1jCQ5a4MRUjXXzr-jAZWPq3QQ5zPQMeXJ",
+                "2" : "https://drive.google.com/uc?id=1yRViO4i8dLgF7HFlwoXbJSxC3VmDzf_P",
+                "3" : "https://drive.google.com/uc?id=1tuOWyYRfc7B_vv4TffDqa7R_0L-hn7-q",
+                "4" : "https://drive.google.com/uc?id=1CUnvUneTVhSzo1RdZVjbWmQDkaGUPSYa",
+                "5" : "https://drive.google.com/uc?id=1z1qwqqm2uzhGWYz1ZLBhtu5U1Ek8C91d",
+                "6" : "https://drive.google.com/uc?id=1sbzVENsyKo4__Xis8puvKimG2i42tP9U",
+                "7" : "https://drive.google.com/uc?id=1BEy10K84pVpKIHBle86BLsD-e4SFfnlU",
+                "8" : "https://drive.google.com/uc?id=1sI4uuuj6cwuCFC92hx3Dac6xGFTD5z7u",
+                "9" : "https://drive.google.com/uc?id=1uYQkmelPqEqtMtnMf2wAOmwXWIiiyFY7",
+                "10" : "https://drive.google.com/uc?id=1vngLi7bKy14qqviCO_ozDrmKxZ0OcomD",
+                "11" : "https://drive.google.com/uc?id=1d36NE55Kh5dV9Mx0j0XHComsMde6cW6T",
+                "12" : "https://drive.google.com/uc?id=1-yOwAHWrXR1eeKyQ1b5d5AbUWr4poHx8",
+                "13" : "https://drive.google.com/uc?id=1h2OSmTr_uk6QixkydJ4OZCuuG8Ae0fxB"
+            }
+        },
         "programming" : {
             "Question" : {
                 "1" : "https://drive.google.com/uc?id=1KMCdhxPRfnt1jDgylsVV3BXxAYziPswu",
@@ -158,6 +190,176 @@
                 "26" : "https://drive.google.com/uc?id=1iuniJrP8lcAdEC6n4_UCopJyqdAsCIlr",
                 "27" : "https://drive.google.com/uc?id=1iVEb8umYdVD9pNsfpgOr9NgkTJGL3oyx",
                 "28" : "https://drive.google.com/uc?id=1wzQha1yDP0XifclDomICnVCPMQsI4X-2"
+            }
+        },
+        "comp_systems" : {
+            "Question" : {
+                "1" : "",
+                "2" : "",
+                "3" : "",
+                "4" : "",
+                "5" : "",
+                "6" : "",
+                "7" : "",
+                "8" : "",
+                "9" : "",
+                "10" : "",
+                "11" : "",
+                "12" : "",
+                "13" : "",
+                "14" : ""           
+            },
+            "Answer" : {
+                "1" : "",
+                "2" : "",
+                "3" : "",
+                "4" : "",
+                "5" : "",
+                "6" : "",
+                "7" : "",
+                "8" : "",
+                "9" : "",
+                "10" : "",
+                "11" : "",
+                "12" : "",
+                "13" : "",
+                "14" : ""
+            }
+        },
+        "comp_networks" : {
+            "Question" : {
+                "1" : "",
+                "2" : "",
+                "3" : "",
+                "4" : "",
+                "5" : "",
+                "6" : "",
+                "7" : "",
+                "8" : "",
+                "9" : "",
+                "10" : "",
+                "11" : "",
+                "12" : "",
+                "13" : "",
+                "14" : ""           
+            },
+            "Answer" : {
+                "1" : "",
+                "2" : "",
+                "3" : "",
+                "4" : "",
+                "5" : "",
+                "6" : "",
+                "7" : "",
+                "8" : "",
+                "9" : "",
+                "10" : "",
+                "11" : "",
+                "12" : "",
+                "13" : "",
+                "14" : ""
+            }
+        },
+        "cyber_security" : {
+            "Question" : {
+                "1" : "",
+                "2" : "",
+                "3" : "",
+                "4" : "",
+                "5" : "",
+                "6" : "",
+                "7" : "",
+                "8" : "",
+                "9" : "",
+                "10" : "",
+                "11" : "",
+                "12" : "",
+                "13" : "",
+                "14" : ""           
+            },
+            "Answer" : {
+                "1" : "",
+                "2" : "",
+                "3" : "",
+                "4" : "",
+                "5" : "",
+                "6" : "",
+                "7" : "",
+                "8" : "",
+                "9" : "",
+                "10" : "",
+                "11" : "",
+                "12" : "",
+                "13" : "",
+                "14" : ""
+            }
+        },
+        "cyber_threats" : {
+            "Question" : {
+                "1" : "",
+                "2" : "",
+                "3" : "",
+                "4" : "",
+                "5" : "",
+                "6" : "",
+                "7" : "",
+                "8" : "",
+                "9" : "",
+                "10" : "",
+                "11" : "",
+                "12" : "",
+                "13" : "",
+                "14" : ""           
+            },
+            "Answer" : {
+                "1" : "",
+                "2" : "",
+                "3" : "",
+                "4" : "",
+                "5" : "",
+                "6" : "",
+                "7" : "",
+                "8" : "",
+                "9" : "",
+                "10" : "",
+                "11" : "",
+                "12" : "",
+                "13" : "",
+                "14" : ""
+            }
+        },
+        "ele" : {
+            "Question" : {
+                "1" : "",
+                "2" : "",
+                "3" : "",
+                "4" : "",
+                "5" : "",
+                "6" : "",
+                "7" : "",
+                "8" : "",
+                "9" : "",
+                "10" : "",
+                "11" : "",
+                "12" : "",
+                "13" : "",
+                "14" : ""           
+            },
+            "Answer" : {
+                "1" : "",
+                "2" : "",
+                "3" : "",
+                "4" : "",
+                "5" : "",
+                "6" : "",
+                "7" : "",
+                "8" : "",
+                "9" : "",
+                "10" : "",
+                "11" : "",
+                "12" : "",
+                "13" : "",
+                "14" : ""
             }
         }
     }
