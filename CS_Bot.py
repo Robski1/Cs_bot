@@ -253,7 +253,7 @@ async def help(ctx, *args):
 
 async def timeLeft():
     await asyncio.sleep(5)
-    channel = bot.get_channel(665690248646492191)
+    channel = bot.get_channel(487334311389954060)
     print(channel)
     
     def dateDiffInSeconds(date1, date2):
@@ -288,7 +288,7 @@ async def timeLeft():
             
             
             if setTime == randTime:
-                timeLeft = (("%d days, %d hours, %d minutes, %d seconds") % dateFormat)+ ' left till CS Paper 1'
+                timeLeft = ('@everyone ' + ("%d days, %d hours, %d minutes, %d seconds") % dateFormat)+ ' left till CS Paper 1'
 
                 embed = discord.Embed(
                 colour = discord.Colour.red(),
