@@ -248,6 +248,45 @@ async def help(ctx, *args):
     else:
         return await errorMsg(ctx)
 
+#### TimeLeft till first CS exam   ####
+
+async def timeLeft():
+    await asyncio.sleep(5)
+    channel = bot.get_channel(665690248646492191)
+    print(channel)
+    def dateDiffInSeconds(date1, date2):
+        timedelta = date2 - date1
+        return timedelta.days * 24 * 3600 + timedelta.seconds
+
+    def daysHoursMinutesSecondsFromSeconds(seconds):
+        minutes, seconds = divmod(seconds, 60)
+        hours, minutes = divmod(minutes, 60)
+        days, hours = divmod(hours, 24)
+        return (days, hours, minutes, seconds)
+
+    while True:
+        leaving_date = datetime.strptime('11-05-2020 01:00:00', '%d-%m-%Y %H:%M:%S')
+        now = datetime.now()
+        dateFormat = daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date))
+
+        setTime = str(now)
+        setTime = setTime[11:]
+        setTime = setTime[:5]
+        
+        if setTime == '18:00':
+            timeLeft = (("%d days, %d hours, %d minutes, %d seconds") % dateFormat)+ ' left till CS Paper 1'
+
+            embed = discord.Embed(
+            colour = discord.Colour.red(),
+            description = timeLeft,
+            )
+            await channel.send(embed=embed)
+            time.sleep(60)
+
+
+bot.loop.create_task(timeLeft())
+
+
 #### RUN TOKEN ####
 
 with open("token.txt", "r") as token:
