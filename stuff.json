@@ -340,36 +340,28 @@
         },
         "ele" : {
             "Question" : {
-                "1" : "",
-                "2" : "",
-                "3" : "",
-                "4" : "",
-                "5" : "",
-                "6" : "",
-                "7" : "",
-                "8" : "",
-                "9" : "",
-                "10" : "",
-                "11" : "",
-                "12" : "",
-                "13" : "",
-                "14" : ""           
+                "1" : "https://drive.google.com/uc?id=1_CfmEOtATS3WDGL-z5npkQWhbZprsCTH",
+                "2" : "https://drive.google.com/uc?id=1ugRr9rIbJyR1KZYaRkENLo_oRJT0l6sC",
+                "3" : "https://drive.google.com/uc?id=1iWGBdEN7QXT-aNnc6FYDA05V1bMbPyDn",
+                "4" : "https://drive.google.com/uc?id=1_3wwvNiLPFkXFZOaOhL8G8uwVAQxU3k3",
+                "5" : "https://drive.google.com/uc?id=1jX2OBMAkyC51pp89rLWDvjxWRk3oKVHZ",
+                "6" : "https://drive.google.com/uc?id=1_64mlf5ZjQDtf_Y8-yv5vt0vnFTwya0d",
+                "7" : "https://drive.google.com/uc?id=1d5-OHbwbxtuVmfF9sqNtBb5tCqijSzzT",
+                "8" : "https://drive.google.com/uc?id=1Zd7OCKa9H0DnQgEDwNIhYZ4O_hYBDAQm",
+                "9" : "https://drive.google.com/uc?id=1aZ_SbEMT6PvCLRzfBXyp1aUtEwCOmkvZ",
+                "10" : "https://drive.google.com/uc?id=1TlRN_wyq1ttt36gvt_PI-Yx6uOUl9bVV"          
             },
             "Answer" : {
-                "1" : "",
-                "2" : "",
-                "3" : "",
-                "4" : "",
-                "5" : "",
-                "6" : "",
-                "7" : "",
-                "8" : "",
-                "9" : "",
-                "10" : "",
-                "11" : "",
-                "12" : "",
-                "13" : "",
-                "14" : ""
+                "1" : "https://drive.google.com/uc?id=1r99GHID2FJQxMqL19pBa-kMTpbF10J6L",
+                "2" : "https://drive.google.com/uc?id=1y5qD0dCxmQV0I93uohG3LizEcJpt1AyQ",
+                "3" : "https://drive.google.com/uc?id=1gbcBASzICJgVCl8rpMJ01kcH3leSLrE8",
+                "4" : "https://drive.google.com/uc?id=1f_fLoKT7ZyiKXDdbJjNfApeKrVf5TAaf",
+                "5" : "https://drive.google.com/uc?id=1lpIyis7_WNoFUIZV-WDP0tcQQXUzh4Jg",
+                "6" : "https://drive.google.com/uc?id=1YF3lw7MZ-0GngtGkTw_2C1TEJiZP8SeM",
+                "7" : "https://drive.google.com/uc?id=1cH7YWZVZF21HHwNK3nkKauCp-WgEwVwg\nhttps://drive.google.com/uc?id=1wKhBkztl2A221r31zqWOtm2IbfCaOQwc",
+                "8" : "https://drive.google.com/uc?id=1XDWEI3-yU-GtMD3LwOLpUsxkIbGuELl_",
+                "9" : "https://drive.google.com/uc?id=1GPO0VWYjhfxVpGP01chYfuiDPO1FM5QJ",
+                "10" : "https://drive.google.com/uc?id=1Gm-4SnlOaM8WckmlRBVlooILHLrHCLm-"
             }
         }
     }
