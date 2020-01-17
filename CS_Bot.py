@@ -305,11 +305,7 @@ async def timeLeft():
 
         if setTime == '18:30':
             msgSent = False
-            
-
-            
-            
-      
+                         
 bot.loop.create_task(timeLeft())
 
 
