@@ -5,6 +5,7 @@ from constants import constants
 import asyncio
 import json
 import random
+from datetime import datetime, time
 bot = commands.Bot(command_prefix = ".", case_insensitive=True)
 bot.remove_command("help")
 
@@ -116,7 +117,7 @@ async def help(ctx, *args):
         
         embed = discord.Embed(
                 colour = discord.Colour.blue(),
-                description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.question**\n`EXAMPLE: .question programming`\n`Do .help question to view subcommands in .question`\n\n**.cheatsheet**\n`See the cheatsheet`\n\n**.help**\n`EXAMPLE: .help question`\n`View help page for the different commands`",
+                description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.question**\n`EXAMPLE: .question programming`\n`Do .help question to view subcommands in .question`\n\n**.cheatsheet**\n`See the cheatsheet`\n\n**.help**\n `EXAMPLE: .help question`\n`View help page for the different help commands`",
                 )
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.author.send(embed=embed)
@@ -133,7 +134,7 @@ async def help(ctx, *args):
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
                         title="The topics are:",
-                        description="1) algorithms\n2) programming\n3) data_rep\n4) comp_systems\n5) comp_networks\n6) cyber_security\n7) cyber_threats\n 8) ele\n\n`Do .question [topic] to recieve a random question based on the chosen topic`\n"
+                        description="1) algorithms\n2) programming\n3) data_rep\n4) comp_systems\n5) comp_networks\n6) cyber\n7) ele\n\n`Do .question [topic] to recieve a random question based on the chosen topic`\n"
                 )
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
@@ -247,43 +248,6 @@ async def help(ctx, *args):
     else:
         return await errorMsg(ctx)
 
-    
-#### COUNTDOWN ####
-@bot.command()
-async def timeLeft(ctx):
-    def dateDiffInSeconds(date1, date2):
-      timedelta = date2 - date1
-      return timedelta.days * 24 * 3600 + timedelta.seconds
-
-    def daysHoursMinutesSecondsFromSeconds(seconds):
-            minutes, seconds = divmod(seconds, 60)
-            hours, minutes = divmod(minutes, 60)
-            days, hours = divmod(hours, 24)
-            return (days, hours, minutes, seconds)
-
-    while True:
-        leaving_date = datetime.strptime('11-05-2020 01:00:00', '%d-%m-%Y %H:%M:%S')
-        #now = datetime.strptime('01-01-2019 01:00:00', '%d-%m-%Y %H:%M:%S')
-        now = datetime.now()
-        dateFormat = daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date))
-        timeLeft = (("%d days, %d hours, %d minutes, %d seconds") % dateFormat)+ ' left till CS Paper 1'
-
-
-
-        seconds = 86400 ## 1 day = 86400
-        
-        for i in range(0,86401):
-            
-            if i == 1:
-                embed = discord.Embed(
-                colour = discord.Colour.red(),
-                description = timeLeft,
-                )
-                await ctx.send(embed=embed)
-
-            time.sleep(1)
-            
-            
 #### RUN TOKEN ####
 
 with open("token.txt", "r") as token:
