@@ -290,7 +290,8 @@ async def timeLeft():
             await channel.send(embed=embed)
             time.sleep(60)
 
-
+        time.sleep(10)
+      
 bot.loop.create_task(timeLeft())
 
 
