@@ -269,7 +269,8 @@ async def timeLeft():
         
         return (days, hours, minutes, seconds)
     
-    while True:
+   while True:
+        msgSent = False
         hourArr = ['16','17','18']
         minArr = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']
 
@@ -277,14 +278,12 @@ async def timeLeft():
         randMin = random.randint(0,len(minArr)-1)
         randTime = hourArr[randHour]+ ':' + minArr[randMin]
         
-        while True:
+        while not msgSent:
             leaving_date = datetime.strptime('11-05-2020 01:00:00', '%d-%m-%Y %H:%M:%S')
             now = datetime.now()
             dateFormat = daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date))
 
-            setTime = str(now)
-            setTime = setTime[11:]
-            setTime = setTime[:5]
+            
             
             if setTime == randTime:
                 timeLeft = (("%d days, %d hours, %d minutes, %d seconds") % dateFormat)+ ' left till CS Paper 1'
@@ -294,10 +293,22 @@ async def timeLeft():
                 description = timeLeft,
                 )
                 await channel.send(embed=embed)
-                time.sleep(60)
-                break
+                
+                await asyncio.sleep(3)
+                
+                msgSent = True
+
+        now = datetime.now()   
+        setTime = str(now)
+        setTime = setTime[11:]
+        setTime = setTime[:5]
+
+        if setTime == '18:30':
+            msgSent = False
             
-            time.sleep(10)
+
+            
+            
       
 bot.loop.create_task(timeLeft())
 
