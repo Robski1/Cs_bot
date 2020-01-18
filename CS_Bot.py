@@ -274,6 +274,7 @@ async def timeLeft():
     randHour = random.randint(0,len(hourArr)-1)
     randMin = random.randint(0,len(minArr)-1)
     randTime = hourArr[randHour]+ ':' + minArr[randMin]   
+    print(randTime)
     
     msgSent = False
     
