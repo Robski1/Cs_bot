@@ -252,34 +252,32 @@ async def help(ctx, *args):
 #### TimeLeft till first CS exam   ####
 
 async def timeLeft():
+    hourArr = ['16','17']
+    minArr = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']
     await asyncio.sleep(5)
     channel = bot.get_channel(487334311389954060)
     print(channel)
     
-    def dateDiffInSeconds(date1, date2):
-        
+    async def dateDiffInSeconds(date1, date2):
         timedelta = date2 - date1
         return timedelta.days * 24 * 3600 + timedelta.seconds
 
-    def daysHoursMinutesSecondsFromSeconds(seconds):
+    async def daysHoursMinutesSecondsFromSeconds(seconds):
         minutes, seconds = divmod(seconds, 60)
         hours, minutes = divmod(minutes, 60)
         days, hours = divmod(hours, 24)
         return (days, hours, minutes, seconds)
+
     msgSent = False
     while True:
-        hourArr = ['16','17']
-        minArr = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']
-
         randHour = random.randint(0,len(hourArr)-1)
         randMin = random.randint(0,len(minArr)-1)
         randTime = hourArr[randHour]+ ':' + minArr[randMin]
         
-        ### While Loop to check to send the time ####
-        while not msgSent:
+        if msgSent == False:
             leaving_date = datetime.strptime('11-05-2020 01:00:00', '%d-%m-%Y %H:%M:%S')
             now = datetime.now()
-            dateFormat = daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date))
+            dateFormat = await daysHoursMinutesSecondsFromSeconds(await dateDiffInSeconds(now, leaving_date))
 
             setTime = str(now)
             setTime = setTime[11:]
@@ -287,7 +285,6 @@ async def timeLeft():
 
             if setTime == randTime:
                 timeLeft = ('@everyone ' + ("%d days, %d hours, %d minutes, %d seconds") % dateFormat)+ ' left till CS Paper 1'
-
                 embed = discord.Embed(
                 colour = discord.Colour.red(),
                 description = timeLeft,
