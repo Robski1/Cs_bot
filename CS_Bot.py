@@ -294,9 +294,6 @@ async def timeLeft():
                 description = timeLeft,
                 )
                 await channel.send(embed=embed)
-                
-                await asyncio.sleep(3)
-                
                 msgSent = True
 
         now = datetime.now()   
