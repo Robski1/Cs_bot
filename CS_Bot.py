@@ -287,7 +287,7 @@ async def timeLeft():
             setTime = setTime[11:16]
 
             if setTime == randTime:
-                timeLeft = ('@everyone ' + ("%d days, %d hours, %d minutes, %d seconds") % dateFormat)+ ' left till CS Paper 1'
+                timeLeft = ('@everyone ' + ("%d DAYS, %d HOURS, %d MINUTES, %d SECONDS") % dateFormat)+ ' LEFT TILL THE FIRST COMPUTER SCIENCE PAPER'
                 embed = discord.Embed(
                 colour = discord.Colour.red(),
                 description = timeLeft,
