@@ -255,7 +255,7 @@ async def timeLeft():
     
     
     await asyncio.sleep(5)
-    channel = bot.get_channel(665690248646492191)
+    channel = bot.get_channel(487334311389954060)
     print(channel)
     
     async def dateDiffInSeconds(date1, date2):
