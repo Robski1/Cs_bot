@@ -278,6 +278,7 @@ async def timeLeft():
         randMin = random.randint(0,len(minArr)-1)
         randTime = hourArr[randHour]+ ':' + minArr[randMin]
         
+        ### While Loop to check to send the time ####
         while not msgSent:
             leaving_date = datetime.strptime('11-05-2020 01:00:00', '%d-%m-%Y %H:%M:%S')
             now = datetime.now()
