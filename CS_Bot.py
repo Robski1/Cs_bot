@@ -302,8 +302,7 @@ async def timeLeft():
 
         now = datetime.now()   
         setTime = str(now)
-        setTime = setTime[11:]
-        setTime = setTime[:5]
+        setTime = setTime[11:16]
 
         if setTime == '15:30':
             
