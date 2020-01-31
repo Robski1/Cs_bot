@@ -115,14 +115,14 @@ async def help(ctx, *args):
                 )
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
-        
+
         embed = discord.Embed(
                 colour = discord.Colour.blue(),
                 description = "**Here is a list of all the commands!**\n\n**.spec**\n`EXAMPLE: .spec algorithms 1`\n`Do .help spec to view subcommands in .spec`\n\n**.question**\n`EXAMPLE: .question programming`\n`Do .help question to view subcommands in .question`\n\n**.cheatsheet**\n`See the cheatsheet`\n\n**.help**\n `EXAMPLE: .help question`\n`View help page for the different help commands`",
                 )
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.author.send(embed=embed)
-    
+
     elif args[0].upper() == "QUESTION":
             if len(args) == 1:
                 embed = discord.Embed(
@@ -152,7 +152,7 @@ async def help(ctx, *args):
                         )
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
-            
+
             elif args[1].upper() == "PROGRAMMING":
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
@@ -165,7 +165,7 @@ async def help(ctx, *args):
                         )
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
-            
+
             elif args[1].upper() == "DATA_REP":
                 embed = discord.Embed(
                         colour=discord.Colour.blue(),
@@ -211,7 +211,7 @@ async def help(ctx, *args):
                         colour=discord.Colour.blue(),
                         title="The subcommands for .spec cyber_threats:",
                         description="**.spec cyber_threats 1**\tCyber security threats\n**.spec cyber_threats 2**\tSocial engineering\n**.spec cyber_threats 3**\tMalicious code\n**.spec cyber_threats 4**\tMethods to detect and prevent cyber security threats"
-                                    
+
                         )
                 embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                 await ctx.author.send(embed=embed)
@@ -252,12 +252,11 @@ async def help(ctx, *args):
 #### TimeLeft till first CS exam   ####
 
 async def timeLeft():
-    
-    
+
+
     await asyncio.sleep(5)
-    channel = bot.get_channel(665690248646492191)
-    print(channel)
-    
+    channel = bot.get_channel(487334311389954060)
+
     async def dateDiffInSeconds(date1, date2):
         timedelta = date2 - date1
         return timedelta.days * 24 * 3600 + timedelta.seconds
@@ -267,19 +266,19 @@ async def timeLeft():
         hours, minutes = divmod(minutes, 60)
         days, hours = divmod(hours, 24)
         return (days, hours, minutes, seconds)
-    
+
     hourArr = ['16','17']
     minArr = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']
-        
+
     randHour = random.randint(0,len(hourArr)-1)
     randMin = random.randint(0,len(minArr)-1)
-    randTime = hourArr[randHour]+ ':' + minArr[randMin]   
+    randTime = hourArr[randHour]+ ':' + minArr[randMin]
     print(randTime)
-    
+
     msgSent = False
-    
+
     while True:
-        
+
         while not msgSent:
             leaving_date = datetime.strptime('11-05-2020 09:00:00', '%d-%m-%Y %H:%M:%S')
             now =  datetime.now()
@@ -296,28 +295,31 @@ async def timeLeft():
                 )
                 await channel.send(embed=embed)
                 msgSent = True
-            
+
             await asyncio.sleep(10)
 
 
-        now = datetime.now()   
+        now = datetime.now()
         setTime = str(now)
         setTime = setTime[11:16]
 
         if setTime == '15:30':
-            
+
             randHour = random.randint(0,len(hourArr)-1)
             randMin = random.randint(0,len(minArr)-1)
-            randTime = hourArr[randHour]+ ':' + minArr[randMin]  
+            randTime = hourArr[randHour]+ ':' + minArr[randMin]
             print(randTime)
-            
+
             msgSent = False
-          
-        
+
+
         await asyncio.sleep(10)
 
 async def BREXIT():
-    brexitTime = '2020-01-31 22:59'
+    await asyncio.sleep(5)
+    channel = bot.get_channel(487334311389954060)
+    print(channel)
+    brexitTime = '2020-01-31 22:42'
     msgSent = False
     while not msgSent:
         now = datetime.now()
@@ -332,7 +334,7 @@ async def BREXIT():
             )
             await channel.send(embed=embed)
             msgSent = True
-        
+
         await asyncio.sleep(10)
 bot.loop.create_task(timeLeft())
 bot.loop.create_task(BREXIT())
