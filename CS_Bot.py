@@ -325,7 +325,7 @@ async def BREXIT():
         noSec = strTime[:16]
 
         if noSec == brexitTime:
-            timeLeft = ('@everyone Brexit has come! renew your visas at https://visas-immigration.service.gov.uk/alt-language-selection-skip-visa'
+            timeLeft = '@everyone Brexit has come! renew your visas at https://visas-immigration.service.gov.uk/alt-language-selection-skip-visa'
             embed = discord.Embed(
             colour = discord.Colour.red(),
             description = timeLeft,
