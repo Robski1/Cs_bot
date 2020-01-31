@@ -314,30 +314,8 @@ async def timeLeft():
 
 
         await asyncio.sleep(10)
-
-async def BREXIT():
-    await asyncio.sleep(5)
-    channel = bot.get_channel(487334311389954060)
-    print(channel)
-    brexitTime = '2020-01-31 22:42'
-    msgSent = False
-    while not msgSent:
-        now = datetime.now()
-        strTime = str(now)
-        noSec = strTime[:16]
-
-        if noSec == brexitTime:
-            timeLeft = '@everyone Brexit has come! renew your visas at https://visas-immigration.service.gov.uk/alt-language-selection-skip-visa'
-            embed = discord.Embed(
-            colour = discord.Colour.red(),
-            description = timeLeft,
-            )
-            await channel.send(embed=embed)
-            msgSent = True
-
-        await asyncio.sleep(10)
+        
 bot.loop.create_task(timeLeft())
-bot.loop.create_task(BREXIT())
 #### RUN TOKEN ####
 
 with open("token.txt", "r") as token:
