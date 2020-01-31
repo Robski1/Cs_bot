@@ -317,7 +317,7 @@ async def timeLeft():
         await asyncio.sleep(10)
 
 async def BREXIT():
-    brexitTime = '31-01-2020 10:59'
+    brexitTime = '31-01-2020 22:59'
     msgSent = False
     while not msgSent:
         now = datetime.now()
