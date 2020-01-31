@@ -333,7 +333,7 @@ async def BREXIT():
             await channel.send(embed=embed)
             msgSent = True
         
-        await aysncio.sleep(10)
+        await asyncio.sleep(10)
 bot.loop.create_task(timeLeft())
 bot.loop.create_task(BREXIT())
 #### RUN TOKEN ####
